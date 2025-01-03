@@ -1,0 +1,104 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Parallax Section */
+.parallax {
+    position: relative;
+    height: 100vh;
+    background: url('https://i.ibb.co/v4VQ2Lg/Whats-App-Image-2025-01-04-at-05-42-31-30f4d73d.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay for better text visibility */
+}
+
+/* Content inside the parallax */
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+.message h1 {
+    font-size: 4em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.message p {
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out 0.5s;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #3463ff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0035f5;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Footer Section */
+.footer {
+    background-color:rgb(64, 112, 255);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    position: relative;
+    z-index: 2;
+}
+
+/* Media Query for mobile responsiveness */
+@media (max-width: 768px) {
+    .message h1 {
+        font-size: 3em;
+    }
+
+    .message p {
+        font-size: 1.4em;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+    }
+}
